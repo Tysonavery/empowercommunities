@@ -15310,3 +15310,134 @@ Rendered locations/_form (45.0ms)
 Rendered _header (2.0ms)
 Rendered _footer (0.0ms)
 Completed in 91ms (View: 61, DB: 2) | 200 OK [http://localhost/locations/new]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-09-25 12:30:44) [GET]
+  [4;36;1mLocation Load (23.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+  [4;35;1mChannel Load (1.0ms)[0m   [0mSELECT * FROM "channels" WHERE ("channels"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #18 of app/views/locations/index.html.erb:
+15:   <tr>
+16:     <td><%= link_to location.name, location %></td>
+17:     <td><%=h location.channel.name %></td>
+18:     <td><%=h location.state.name %></td>
+19:     <td><%=h location.primary_contact %></td>
+20:     <td><%=h location.position %></td>
+21:     <td><%=h location.contact_number %></td>
+
+    app/views/locations/index.html.erb:18
+    app/views/locations/index.html.erb:14:in `each'
+    app/views/locations/index.html.erb:14
+    app/controllers/locations_controller.rb:7:in `index'
+
+Rendered rescues/_trace (179.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2009-09-25 12:30:47) [GET]
+  [4;36;1mLocation Load (2.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+  [4;35;1mChannel Load (2.0ms)[0m   [0mSELECT * FROM "channels" WHERE ("channels"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #18 of app/views/locations/index.html.erb:
+15:   <tr>
+16:     <td><%= link_to location.name, location %></td>
+17:     <td><%=h location.channel.name %></td>
+18:     <td><%=h location.state.name %></td>
+19:     <td><%=h location.primary_contact %></td>
+20:     <td><%=h location.position %></td>
+21:     <td><%=h location.contact_number %></td>
+
+    app/views/locations/index.html.erb:18
+    app/views/locations/index.html.erb:14:in `each'
+    app/views/locations/index.html.erb:14
+    app/controllers/locations_controller.rb:7:in `index'
+
+Rendered rescues/_trace (168.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-25 12:31:11) [GET]
+
+ActionController::RoutingError (No route matches "/lacations/1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-09-25 12:31:24) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Rendered products/_form (1758.0ms)
+Rendered _header (22.0ms)
+Rendered _footer (2.0ms)
+Completed in 1892ms (View: 1871, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-09-25 12:31:27) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Rendered products/_form (21.0ms)
+Rendered _header (2.0ms)
+Rendered _footer (0.0ms)
+Completed in 440ms (View: 35, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing AreaProductsController#index (for 127.0.0.1 at 2009-09-25 12:31:34) [GET]
+  [4;36;1mAreaProduct Load (2.0ms)[0m   [0;1mSELECT * FROM "area_products" [0m
+Rendering template within layouts/area_products
+Rendering area_products/index
+Rendered _header (2.0ms)
+Rendered _footer (0.0ms)
+Completed in 94ms (View: 68, DB: 2) | 200 OK [http://localhost/area_products]
+
+
+Processing AreaProductsController#new (for 127.0.0.1 at 2009-09-25 12:31:37) [GET]
+Rendering template within layouts/area_products
+Rendering area_products/new
+Rendered _header (1.0ms)
+Rendered _footer (0.0ms)
+Completed in 104ms (View: 87, DB: 0) | 200 OK [http://localhost/area_products/new]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-09-25 12:31:42) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Rendered _header (1.0ms)
+Rendered _footer (0.0ms)
+Completed in 48ms (View: 30, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-09-25 12:31:46) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Rendered products/_form (25.0ms)
+Rendered _header (1.0ms)
+Rendered _footer (1.0ms)
+Completed in 61ms (View: 42, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing StatesController#index (for 127.0.0.1 at 2009-09-25 12:31:50) [GET]
+  [4;36;1mState Load (2.0ms)[0m   [0;1mSELECT * FROM "states" [0m
+Rendering template within layouts/states
+Rendering states/index
+Rendered _header (2.0ms)
+Rendered _footer (1.0ms)
+Completed in 130ms (View: 107, DB: 2) | 200 OK [http://localhost/states]
+
+
+Processing VolunteersController#index (for 127.0.0.1 at 2009-09-25 12:31:53) [GET]
+  [4;35;1mVolunteer Load (3.0ms)[0m   [0mSELECT * FROM "volunteers" [0m
+Rendering template within layouts/volunteers
+Rendering volunteers/index
+Rendered _header (1.0ms)
+Rendered _footer (0.0ms)
+Completed in 186ms (View: 155, DB: 3) | 200 OK [http://localhost/volunteers]

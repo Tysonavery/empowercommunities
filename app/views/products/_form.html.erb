@@ -12,7 +12,8 @@
   </tr>
   <tr>
     <td><%= f.label :product_type_id %></td>
-    <td><%= f.text_field :product_type_id %></td>
+    <td><%= f.select :product_type_id, ProductType.find(:all , :order => "name").collect {|s|	
+		[(s.name), s.id]} %></td>
   </tr>
   <tr>
     <td><%= f.label :first_production %></td>
@@ -25,12 +26,8 @@
   
   <% f.fields_for :area_products do |ap| %>
 	  <tr>
-		<td><%= ap.label :product_id %></td>
-		<td><%= ap.text_field :product_id %></td>
-	  </tr>
-	  <tr>
 		<td><%= ap.label :shape %></td>
-		<td><%= ap.text_field :shape %></td>
+		<td><%= ap.select (:shape, [['Round', '1'], ['Rectangle', '2']]) %></td>
 	  </tr>
 	  <tr>
 	    <td><%= ap.label :width %></td>

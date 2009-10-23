@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+<<<<<<< HEAD
+=======
+  map.resources :permissions
+
+  map.resources :roles
+>>>>>>> 079d8f868b253a473fb2269944683d14ff0fc09c
 
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"

@@ -10,10 +10,14 @@
 # It's strongly recommended to check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20091023004405) do
 =======
 ActiveRecord::Schema.define(:version => 20091009052855) do
 >>>>>>> 586ac0c2770e732e2e09eac8825e95d8de361fb8
+=======
+ActiveRecord::Schema.define(:version => 20091023043701) do
+>>>>>>> 079d8f868b253a473fb2269944683d14ff0fc09c
 
   create_table "area_products", :force => true do |t|
     t.integer  "product_id"
@@ -50,6 +54,18 @@ ActiveRecord::Schema.define(:version => 20091009052855) do
     t.integer  "state_id"
   end
 
+  create_table "permissions", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "permissions_roles", :id => false, :force => true do |t|
+    t.integer "permission_id"
+    t.integer "role_id"
+  end
+
   create_table "product_types", :force => true do |t|
     t.string   "name"
     t.date     "first_production"
@@ -67,6 +83,13 @@ ActiveRecord::Schema.define(:version => 20091009052855) do
     t.datetime "updated_at"
   end
 
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "states", :force => true do |t|
     t.string   "name"
     t.string   "code"
@@ -76,6 +99,9 @@ ActiveRecord::Schema.define(:version => 20091009052855) do
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 079d8f868b253a473fb2269944683d14ff0fc09c
   create_table "user_sessions", :force => true do |t|
     t.string   "username"
     t.string   "password"
@@ -83,8 +109,11 @@ ActiveRecord::Schema.define(:version => 20091009052855) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
 =======
 >>>>>>> 586ac0c2770e732e2e09eac8825e95d8de361fb8
+=======
+>>>>>>> 079d8f868b253a473fb2269944683d14ff0fc09c
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "email"
@@ -100,6 +129,7 @@ ActiveRecord::Schema.define(:version => 20091009052855) do
     t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "role_id"
   end
 
   create_table "volunteers", :force => true do |t|

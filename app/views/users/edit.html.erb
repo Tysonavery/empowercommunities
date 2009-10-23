@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Users: <%= controller.action_name %></title>
@@ -56,3 +57,16 @@
 
 
 
+=======
+<p class="content-nav">
+  <%= link_to 'Show', @user %> | 
+  <%= link_to 'Destroy', @user, :confirm => 'Are you sure?', :method => :delete %> | 
+  <%= link_to 'Back', users_path %> 
+</p>
+
+<h1>Edit: <%= @user.username %></h1>
+
+<div class="column-1">
+  <%= render :partial => 'form' %>
+</div>
+>>>>>>> 586ac0c2770e732e2e09eac8825e95d8de361fb8

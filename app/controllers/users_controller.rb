@@ -61,7 +61,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
+<<<<<<< HEAD
         flash[:notice] = 'Successfully Updated Profile.'
+=======
+        flash[:notice] = 'Successfully updated profile'
+>>>>>>> 586ac0c2770e732e2e09eac8825e95d8de361fb8
         format.html { redirect_to(@user) }
         format.xml  { head :ok }
       else

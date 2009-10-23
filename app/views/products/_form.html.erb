@@ -12,8 +12,15 @@
   </tr>
   <tr>
     <td><%= f.label :product_type_id %></td>
+<<<<<<< HEAD
     <td><%= f.select :product_type_id, ProductType.find(:all , :order => "name").collect {|s|	
 		[(s.name), s.id]} %></td>
+=======
+	<td>
+	  <%= f.select :product_type_id, ProductType.find(:all , :order => "name").collect {|s| [(s.name), s.id]} %>
+	  <%= link_to ' Add New Product Type ', new_product_type_path %>
+    </td>
+>>>>>>> 586ac0c2770e732e2e09eac8825e95d8de361fb8
   </tr>
   <tr>
     <td><%= f.label :first_production %></td>
@@ -23,15 +30,18 @@
     <td><%= f.label :ceased_production %></td>
     <td><%= f.date_select :ceased_production, :start_year=>2004 , :end_year=>Time.now.year %></td>
   </tr>
-  
+    
   <% f.fields_for :area_products do |ap| %>
 	  <tr>
+<<<<<<< HEAD
 		<td><%= ap.label :shape %></td>
 		<td><%= ap.select (:shape, [['Round', '1'], ['Rectangle', '2']]) %></td>
 		<td><%= ap.label :product_id %></td>
 		<td><%= ap.text_field :product_id %></td>
 	  </tr>
 	  <tr>
+=======
+>>>>>>> 586ac0c2770e732e2e09eac8825e95d8de361fb8
 		<td><%= ap.label :shape %></td>
 		<td><%= ap.text_field :shape %></td>
 	  </tr>
